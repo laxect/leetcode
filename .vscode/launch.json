@@ -3,14 +3,17 @@
   // Hover to view descriptions of existing attributes.
   // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
   "version": "0.2.0",
-  "configurations": [
-    {
-      "type": "lldb",
-      "request": "launch",
-      "name": "Debug",
-      "program": "${workspaceFolder}/<your program>",
-      "args": [],
-      "cwd": "${workspaceFolder}"
-    }
-  ]
+  "configurations": [{
+    "type": "lldb",
+    "request": "launch",
+    "name": "debug",
+    "program": "${workspaceFolder}/target/debug/leetcode.exe",
+    "sourceLanguages": ["rust"],
+    "cargo": {
+      "args": ["test", "--no-run"], // Cargo command line to build the debug target
+      // "args": ["build", "--bin=foo"] is another possibility
+    },
+    "args": [],
+    "cwd": "${workspaceFolder}"
+  }]
 }

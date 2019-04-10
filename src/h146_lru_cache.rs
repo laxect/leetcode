@@ -84,7 +84,8 @@ impl LRUCache {
         if self.capacity == 0 {
             return;
         }
-        if let Some((ref mut val, ref mut ver)) = self.map.get_mut(&key) {  // update
+        if let Some((ref mut val, ref mut ver)) = self.map.get_mut(&key) {
+            // update
             *val = value;
             *ver += 1;
             self.list.push_front((key, *ver));

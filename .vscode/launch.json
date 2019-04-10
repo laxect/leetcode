@@ -10,8 +10,8 @@
     "program": "${workspaceFolder}/target/debug/leetcode.exe",
     "sourceLanguages": ["rust"],
     "cargo": {
-      "args": ["test", "--no-run"], // Cargo command line to build the debug target
-      // "args": ["build", "--bin=foo"] is another possibility
+      // "args": ["test", "--no-run"], // Cargo command line to build the debug target
+      "args": ["build"] // is another possibility
     },
     "args": [],
     "cwd": "${workspaceFolder}"

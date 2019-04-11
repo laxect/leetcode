@@ -42,23 +42,18 @@ impl Solution {
             return 0;
         }
         for i in 0..n {
-            if i == nums[i] as usize {
+            if i == nums[i] as usize || i == n {
                 continue;
             }
-            if i == n {
-                pos_n = i;
-                continue;
-            }
-            let cur = i;
             loop {
-                let nxt = nums[cur] as usize;
+                let nxt = nums[i] as usize;
                 if nxt != n {
-                    nums.swap(nxt, cur);
+                    nums.swap(nxt, i);
                 } else {
-                    pos_n = cur;
+                    pos_n = i;
                     break;
                 }
-                if nums[cur] as usize == cur {
+                if nums[i] as usize == i {
                     break;
                 }
             }

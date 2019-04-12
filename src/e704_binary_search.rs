@@ -55,32 +55,17 @@ impl Solution {
             }
             num => num - 1,
         };
-        let pos = loop {
-            let cur = l + (r-l) / 2;
-            if l >= r {
-                if nums[cur] == target {
-                    break cur;
-                } else {
-                    return -1;
-                }
-            } else if l + 1 == r {
-                if nums[cur] == target {
-                    break cur;
-                } else if nums[r] == target {
-                    break r;
-                } else {
-                    return -1;
-                }
-            }
-            if nums[cur] == target {
-                break cur;
-            } else if nums[cur] < target {
-                l = cur;
+        while l <= r {
+            let mid = l + (r-l) / 2;
+            if nums[mid] > target {
+                r = mid - 1;
+            } else if nums[mid] < target {
+                l = mid + 1;
             } else {
-                r = cur;
+                return mid as i32;
             }
         };
-        pos as i32
+        -1
     }
 }
 

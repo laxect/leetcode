@@ -56,7 +56,7 @@ impl Solution {
             num => num - 1,
         };
         let pos = loop {
-            let cur = (l + r) / 2;
+            let cur = l + (r-l) / 2;
             if l >= r {
                 if nums[cur] == target {
                     break cur;

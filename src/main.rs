@@ -3,6 +3,7 @@
 // mod e268_missing_number;
 // mod e326_power_of_three;
 // mod e704_binary_search;
+// mod e155_min_stack;
 
 fn main() {
     println!("Hello, world!");

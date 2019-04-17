@@ -4,6 +4,7 @@
 // mod e326_power_of_three;
 // mod e704_binary_search;
 // mod e155_min_stack;
+// mod h032_longest_valid_parentheses;
 
 fn main() {
     println!("Hello, world!");

@@ -5,6 +5,7 @@
 // mod e704_binary_search;
 // mod e155_min_stack;
 // mod h032_longest_valid_parentheses;
+// mod e058_length_of_last_word;
 
 fn main() {
     println!("Hello, world!");

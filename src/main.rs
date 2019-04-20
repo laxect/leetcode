@@ -6,6 +6,7 @@
 // mod e155_min_stack;
 // mod h032_longest_valid_parentheses;
 // mod e1021_remove_outermost_parentheses;
+// mod e461_hamming_distance;
 
 fn main() {
     println!("Hello, world!");

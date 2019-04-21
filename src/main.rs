@@ -9,6 +9,10 @@
 // mod e058_length_of_last_word;
 // mod e1021_remove_outermost_parentheses;
 // mod e461_hamming_distance;
+// mod e1030_matrix_cells_in_distance_order;
+// mod e1029_two_city_scheduling;
+// mod e1031_maximum_sum_of_two_non_overlapping_subarrays;
+// mod e1032_stream_of_characters;
 
 fn main() {
     println!("Hello, world!");

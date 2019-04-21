@@ -1,8 +1,6 @@
-use std::collections::VecDeque;
-
 pub struct StreamChecker {
     words: Vec<String>,
-    find: VecDeque<(usize, usize)>,
+    find: String,
 }
 
 
@@ -15,36 +13,13 @@ impl StreamChecker {
     pub fn new(words: Vec<String>) -> Self {
         Self {
             words,
-            find: VecDeque::new(),
+            find: String::new(),
         }
     }
 
     pub fn query(&mut self, letter: char) -> bool {
-        let mut res = false;
-        for _ in 0..self.find.len() {
-            if let Some((i, mut ind)) = self.find.pop_front() {
-                ind += 1;
-                let l = self.words[i].len();
-                if l > ind && self.words[i].as_bytes()[ind] as char == letter {
-                    if ind + 1 == l {
-                        res = true;
-                    } else {
-                        self.find.push_back((i, ind));
-                    }
-                }
-            }
-        }
-        // add new find
-        for i in 0..self.words.len() {
-            if letter == self.words[i].as_bytes()[0] as char {
-                if self.words[i].len() > 1 {
-                    self.find.push_back((i, 0));
-                } else {
-                    res = true;
-                }
-            }
-        }
-        res
+        self.find.push(letter);
+        self.words.iter().any(|s| self.find.ends_with(s.as_str()))
     }
 }
 

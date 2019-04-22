@@ -7,13 +7,7 @@ impl Solution {
         costs.sort_unstable_by(|x, y| {
             let a = x[0] - x[1];
             let b = y[0] - y[1];
-            if a > b {
-                std::cmp::Ordering::Greater
-            } else if a == b {
-                std::cmp::Ordering::Equal
-            } else {
-                std::cmp::Ordering::Less
-            }
+            a.cmp(&b)
         });
         let len = costs.len();
         let len_a = len/2;

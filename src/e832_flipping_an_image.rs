@@ -6,16 +6,8 @@ impl Solution {
             let mut r = v.len() - 1;
             for i in 0..=r/2 {
                 let (el, er) = (v[i], v[r]);
-                v[r] = match el {
-                    0 => 1,
-                    1 => 0,
-                    _ => unreachable!()
-                };
-                v[i] = match er {
-                    0 => 1,
-                    1 => 0,
-                    _ => unreachable!()
-                };
+                v[r] = el^1;
+                v[i] = er^1;
                 r -= 1;
             }
             v

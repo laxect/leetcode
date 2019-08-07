@@ -15,7 +15,7 @@
 // mod e1032_stream_of_characters;
 // mod e709_to_lower_case;
 // mod e804;
-// mod e832_flipping_an_image;
+mod e832_flipping_an_image;
 
 fn main() {
     println!("Hello, world!");

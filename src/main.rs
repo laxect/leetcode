@@ -17,6 +17,7 @@
 // mod e804;
 // mod e832_flipping_an_image;
 // mod e905_sort_array_by_parity;
+// mod e961_n_repeated_element_in_size_2n_array;
 
 fn main() {
     println!("Hello, world!");

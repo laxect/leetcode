@@ -7,7 +7,7 @@
     "type": "lldb",
     "request": "launch",
     "name": "debug",
-    "program": "${workspaceFolder}/target/debug/leetcode.exe",
+    "program": "${workspaceFolder}/target/debug/leetcode",
     "sourceLanguages": ["rust"],
     "cargo": {
       // "args": ["test", "--no-run"], // Cargo command line to build the debug target

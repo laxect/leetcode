@@ -21,5 +21,5 @@
 // mod e657_robot_return_to_origin;
 
 fn main() {
-    println!("{:?}", leetcode::e977_squares_of_a_sorted_array::Solution::sorted_squares(vec![-4,-1,0,3,10]));
+    // println!("{:?}", leetcode::e977_squares_of_a_sorted_array::Solution::sorted_squares(vec![-4,-1,0,3,10]));
 }
